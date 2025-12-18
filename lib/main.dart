@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ui/groceries/grocery_list.dart';
 
-
 void main() {
 
   runApp(const MyApp());

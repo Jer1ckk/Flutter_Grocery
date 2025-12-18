@@ -15,7 +15,7 @@ class NewItem extends StatefulWidget {
 class _NewItemState extends State<NewItem> {
   // Default settings
   static const defautName = "";
-  static const defaultQuantity = 0;
+  static const defaultQuantity = "";
   static const defaultCategory = GroceryCategory.fruit;
 
   // Inputs
@@ -29,7 +29,7 @@ class _NewItemState extends State<NewItem> {
 
     // Initialize intputs with default settings
     _nameController.text = defautName;
-    _quantityController.text = defaultQuantity.toString();
+    _quantityController.text = defaultQuantity;
   }
 
   @override
@@ -46,7 +46,7 @@ class _NewItemState extends State<NewItem> {
 
     setState(() {
       _nameController.text = defautName;
-      _quantityController.text = defaultQuantity.toString();
+      _quantityController.text = defaultQuantity;
       _selectedCategory = defaultCategory;
     });
   }
@@ -68,7 +68,7 @@ class _NewItemState extends State<NewItem> {
       } else if (quantity == null) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text("Invalid input"),
+            content: Text("Invalid quantity input"),
             duration: Duration(seconds: 3),
           ),
         );
