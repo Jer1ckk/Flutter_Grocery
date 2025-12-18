@@ -66,8 +66,7 @@ class GroceryTile extends StatelessWidget {
         decoration: BoxDecoration(color: grocery.category.color),
       ),
       title: Text(grocery.name),
-      subtitle: Text(grocery.quantity.toString()),
-      trailing: const Icon(Icons.drag_handle),
+      trailing: Text(grocery.quantity.toString()),
     );
   }
 }
